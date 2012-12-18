@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>blog-nodend test project</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        var collections = function(){
+            $.getJSON("http://localhost:1991/test/dd",
+                    function(data) {
+                        console.log(data);
+                    });
+        }
+    </script>
+</head>
+<body>
+     <button onclick="collections()">collections</button>
+</body>
+</html>
