@@ -4,18 +4,22 @@
  * Time: 下午6:26
  */
 exports=module.exports=rest;
+var wind = require("wind");
 var mongo = require('../utils/mongo');
+var send = require('../utils/send');
 function rest(req,res){
     var urls = parse(req.url);
     if(urls){
         execte(urls,req.method);
     }
-    var names =mongo.collections();
-    console.log('rest....');
-    console.log(names);
-    var str =   JSON.stringify(names);
-    res.writeHead(200,{'Content-Type':'application/json;charset=UTF-8','Access-Control-Allow-Origin': '*'});
-    res.end(str);
+    mongo.collections(function(err,collections){
+        if(!err){
+            send(res,collections);
+        }
+        else{
+            send.error(res,1,err);
+        }
+    });
 }
 
 function parse(url){

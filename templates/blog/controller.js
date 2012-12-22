@@ -5,7 +5,7 @@
  */
 exports = module.exports = controller;
 var rest = require('./apis/rest'),
-    error = require('./utils/error');
+    error = require('./utils/send');
 global.apis = {};
 global.apis['rest'] = rest;
 function controller(name,req,res){
@@ -14,7 +14,7 @@ function controller(name,req,res){
         api(req,res);
     }
     else{
-       error.res(res,1,'api-'+name+" not found");
+       send.errro(res,1,'api-'+name+" not found");
     }
 }
 exports.use = function(name){
@@ -23,6 +23,6 @@ exports.use = function(name){
         global.apis[name] = api;
     }
     else{
-       error.log('api:'+name+" not found");
+       send.log('api:'+name+" not found");
     }
 };

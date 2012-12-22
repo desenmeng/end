@@ -4,7 +4,7 @@
  * Time: 下午3:10
  */
 var express = require('express');
-var nodend = require('./nodend');
+var end = require('./end');
 var path = require('path');
 var app = express();
 app.configure(function () {
@@ -12,7 +12,6 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'client')));
 });
 //配置参数方便数据库的其他帮顶。
-nodend({host:"localhost",port:27017,username:"",password:"",app:"nodend"});
-nodend.use('apidemo');
+end({host:"localhost",port:27017,username:"",password:"",app:"nodend"});
 app.listen(app.get('port'));
 

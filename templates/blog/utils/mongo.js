@@ -4,24 +4,14 @@
  * Time: 下午5:34
  */
 var mongo = exports = module.exports = {};
-
 /**
  * 获取所有集合名称
  */
-mongo.collections = function () {
+mongo.collections = function (callback) {
     global.db.collectionNames(function (err, names) {
-        if(err){
-            console.log(err);
-            return null;
-        }
-        else{
-            console.log('mongo---collections');
-            console.log(names);
-            return names;
-        }
+        callback(err,names);
     });
 };
-
 /**
  * 对集合的查询操作
  * @param name      集合名称
