@@ -2,16 +2,52 @@
 <html>
 <head>
     <title>socket.io demo</title>
+    <meta charset="utf-8">
     <script src="socket.io.js"></script>
+    <script src="god.js?id=123456"></script>
     <script>
         var socket = io.connect('http://localhost',function(res){
         });
+        var ssID = '';
         socket.on('join',function(data){
-            console.log(data);
+            ssID = data;
+            socket.emit('',{host:window.location.host})
         });
     </script>
+    <style>
+        body{
+            background: #22252A;
+            color: #EEE;
+        }
+        .god_container{
+            width: 300px;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        #god_enter{
+            width: 300px;
+            border-width: 0;
+            outline-width: 0;
+            background: #6b96ff;
+            font-size: inherit;
+        }
+        .god_msg{
+            color: #adff2f;
+            display: block;
+        }
+        .god_msgs{
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
-
+   <div class="god_container">
+       <div class="god_msgs">
+           <span class="god_msg">欢迎来到与我同在</span>
+           <span class="god_msg">@mdemo</span>
+       </div>
+       <input id="god_enter" type="text">
+   </div>
 </body>
 </html>
