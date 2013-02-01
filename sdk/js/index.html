@@ -2,12 +2,26 @@
 <html>
 <head>
     <title>End.js Demo Online</title>
+    <meta charset="utf-8">
     <script src="socket.io.js"></script>
     <script src="endclient.js"></script>
     <script>
-       var chat = end.init('http://localhost');
-       end.addons({route:'chat.joinRoom',data:'data'});
-
+        var chatRooms = new End('chatRooms','http://localhost');
+//        chatRooms.insert({url:document.location.href,title:document.title},function(id){
+//            console.log(id);
+//        });
+        var room = chatRooms.child('510b397d1d0ecfe808000005');
+        room.update({url:'woxiangqu.com2',title:'mdemo2'},function(result){
+            console.log(result);
+        });
+//        var roomURL = room.child('url');
+//        roomURL.set('www.baidu.com',function(result){
+//            console.log(result);
+//        });
+        var roomMsgs = room.child('msgs');
+        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
+            console.log(result);
+        });
     </script>
 </head>
 <body>
