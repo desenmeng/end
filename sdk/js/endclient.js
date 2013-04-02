@@ -48,15 +48,16 @@
      * @param value 要处理的数据
      * @param method 方法类型
      * @param callback 回调函数
+     * @param options
      */
     End.prototype.data = function(value,method,callback,options){
-        var data = {};
-        data.routes = this.route.split('.');
-        data.value = value;
-        data.method = method;
-        if(options){
-            data.options = options;
-        }
+        var data = {
+            routes:this.route.split('.'),
+            route: this.route,
+            value:value||null,
+            method:method,
+            options:options||null
+        };
         _vars.socket.emit('dal',data,function(returns){
             if(callback){
                 callback(returns);
@@ -69,7 +70,7 @@
      * @param callback 回调函数 成功返回id
      */
     End.prototype.insert = function(value,callback){
-        this.data(value,'insert',callback);
+        this.data(value,'insert',callback,null);
     };
     /**
      * 添加或修改非数组数据
@@ -77,7 +78,7 @@
      * @param callback 回调函数 会返回是否成功
      */
     End.prototype.set = function (value,callback) {
-        this.data(value,'set',callback);
+        this.data(value,'set',callback,null);
     };
     /**
      * 添加数组数据
@@ -85,13 +86,18 @@
      * @param callback 回调函数 会返回是否成功
      */
     End.prototype.push = function(value,callback){
-        this.data(value,'push',callback);
+        this.data(value,'push',callback,null);
     };
     End.prototype.update = function (value,options,callback) {
         this.data(value,'update',callback,options);
     };
-    End.prototype.on = function () {
+    End.prototype.findById = function (callback){
+        this.data(null,'findById',callback)
+    };
+    End.prototype.findAll = function(callback){
+        this.data(null,'findAll',callback);
+    };
+    End.prototype.on = function (type,callback) {
 
     };
-
 }());

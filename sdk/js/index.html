@@ -3,7 +3,7 @@
 <head>
     <title>End.js Demo Online</title>
     <meta charset="utf-8">
-    <script src="socket.io.js"></script>
+    <script src="socket.io.min.js"></script>
     <script src="endclient.js"></script>
     <script>
         var chatRooms = new End('chatRooms','http://localhost:8080');
@@ -11,17 +11,18 @@
 //            console.log(id);
 //        });
         var room = chatRooms.child('5155bd645ba882d606000001');
+        console.log(room);
         room.update({url:'woxiangqu.com2',title:'mdemo2'},function(result){
             console.log(result);
         });
-//        var roomURL = room.child('url');
-//        roomURL.set('www.baidu.com',function(result){
-//            console.log(result);
-//        });
-        var roomMsgs = room.child('msgs');
-        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
+        var roomURL = room.child('url');
+        roomURL.set('m.baidu.com',function(result){
             console.log(result);
         });
+//        var roomMsgs = room.child('msgs');
+//        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
+//            console.log(result);
+//        });
     </script>
 </head>
 <body>
