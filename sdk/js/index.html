@@ -11,14 +11,16 @@
 //            console.log(id);
 //        });
         var room = chatRooms.child('5155bd645ba882d606000001');
-        console.log(room);
+        room.on('child_changed',function(item){
+             console.log(item);
+        });
         room.update({url:'woxiangqu.com2',title:'mdemo2'},function(result){
             console.log(result);
         });
-        var roomURL = room.child('url');
-        roomURL.set('m.baidu.com',function(result){
-            console.log(result);
-        });
+//        var roomURL = room.child('url');
+//        roomURL.set('m.baidu.com',function(result){
+//            console.log(result);
+//        });
 //        var roomMsgs = room.child('msgs');
 //        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
 //            console.log(result);

@@ -6,7 +6,8 @@
  */
 (function () {
     var _vars = {
-        socket:{}
+        socket:{},
+        callbacks:[]
     };
     var root = window;
     /**
@@ -24,6 +25,9 @@
                     console.log(success);
                 });
             });
+            _vars.socket.on('listen',function(data){
+                _vars.callbacks[data.route](data);
+            })
         }
     };
     root.End = End;
@@ -97,7 +101,8 @@
     End.prototype.findAll = function(callback){
         this.data(null,'findAll',callback);
     };
-    End.prototype.on = function (type,callback) {
-
+    End.prototype.on = function (ontype,callback) {
+        _vars.socket.emit('onlisten',ontype,this.route);
+        _vars.callbacks[this.route+'.'+ontype] = callback;
     };
 }());
