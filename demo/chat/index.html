@@ -2,9 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Create Room</title>
+    <script src="js/lib/socket.io.min.js"></script>
+    <script src="js/lib/endclient.js"></script>
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-
+<button id="create" style="line-height: 50px;font-size: 30px;display: block;margin: 50px auto;">
+    Create Room
+</button>
+<script>
+    $('#create').click(function(){
+        var chat = new End('chat','http://localhost:8080');
+        chat.insert({name:'a new room'},function(id){
+            window.location.href = ("chat.html?"+id);
+        });
+    });
+</script>
 </body>
 </html>
