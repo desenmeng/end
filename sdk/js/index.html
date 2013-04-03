@@ -7,21 +7,33 @@
     <script src="endclient.js"></script>
     <script>
         var chatRooms = new End('chatRooms','http://localhost:8080');
-//        chatRooms.insert({url:document.location.href,title:document.title},function(id){
-//            console.log(id);
+        chatRooms.on('child_added',function(item){
+            console.log(item);
+        });
+        chatRooms.insert({url:document.location.href,title:document.title},function(id){
+            console.log(id);
+        });
+//        var room = chatRooms.child('5155bd645ba882d606000001');
+//        room.on('child_changed',function(item){
+//             console.log(item);
 //        });
-        var room = chatRooms.child('5155bd645ba882d606000001');
-        room.on('child_changed',function(item){
-             console.log(item);
-        });
-        room.update({url:'woxiangqu.com2',title:'mdemo2'},function(result){
-            console.log(result);
-        });
+//        room.update({url:'woxiangqu.com2',title:'mdemo2'},function(result){
+//            console.log(result);
+//        });
 //        var roomURL = room.child('url');
+//        roomURL.on('child_changed',function(item){
+//            console.log(item);
+//        });
 //        roomURL.set('m.baidu.com',function(result){
 //            console.log(result);
 //        });
 //        var roomMsgs = room.child('msgs');
+//        roomMsgs.on('child_added',function(item){
+//            console.log(item);
+//        });
+//        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
+//            console.log(result);
+//        });
 //        roomMsgs.push({user:'mdemo',msg:'@test'},function(result){
 //            console.log(result);
 //        });

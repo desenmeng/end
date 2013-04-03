@@ -25,8 +25,8 @@
                     console.log(success);
                 });
             });
-            _vars.socket.on('listen',function(data){
-                _vars.callbacks[data.route](data);
+            _vars.socket.on('callback',function(data){
+                _vars.callbacks[data.mark](data);
             })
         }
     };

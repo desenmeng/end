@@ -1,5 +1,5 @@
 {
-  "author": "Demo Meng <mengdesen09@qq.com> (http://biaoqian.me/)",
+  "author": "demohi <mengdesen09@qq.com> (https://github.com/demohi)",
   "homepage": "https://github.com/demohi/end",
   "bugs": {
     "url": "https://github.com/demohi/end/issues",
@@ -24,7 +24,9 @@
     "end",
     "backend",
     "mongodb",
-    "BaaS"
+    "BaaS",
+    "meteor",
+    "firebase"
   ],
-  "license": "BSD"
+  "license": "The MIT License"
 }
