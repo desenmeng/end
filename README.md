@@ -1,6 +1,9 @@
 ##End.js -- a Realtime BaaS like Firebase by Socket.io and MongoDB
 
+>Firebase -- Scalable real-time backend .Build apps fast without managing servers.
 
+>End.js -- Package like Firebase what you can deploy in your own server.
+             
 ## Features
 
 ### Realtime
@@ -16,7 +19,7 @@
 
 ### Like Firebase
 
-* api desi
+* api 
 
 ##Demo
 
@@ -34,9 +37,6 @@
 	});
  
 ```
-
-## Why should I use End.js?
-
 
 ## Contributors
 * [@mdemo](http://weibo.com/mdemo)
