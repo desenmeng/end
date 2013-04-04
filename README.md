@@ -1,12 +1,52 @@
-End.js
-===============
+##End.js -- a Realtime BaaS like Firebase by Socket.io and MongoDB
+
+
+## Features
+
+### Realtime
+
+* Distributed (multi-process) architecture
+* Flexible server extension
+* Full performance optimization and test
+
+### Easy
+
+* Simple API
+* Lightweight
+
+### Like Firebase
+
+* api desi
+
+##Demo
+
+```javascript
+	var chat = new End('chat','http://localhost:8080'),
+    chatRoom = chat.child(window.location.search.split('?')[1]),
+    chatMsgs = chatRoom.child('msgs');
+	chatMsgs.on('child_added',function(msg){
+    	$('.msgs').append('<div class="msg">'+msg.value.name+' : '+msg.value.text+'</div>');
+	});
+	$('#btn_send').click(function(){
+    	var name = $('.txt_send_name').val();
+    	var text = $('.txt_send_text').val();
+    	chatMsgs.push({name:name,text:text});
+	});
+ 
+```
+
+## Why should I use End.js?
+
+
+## Contributors
+* [@mdemo](http://weibo.com/mdemo)
 
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2012 @mdemo(http://weibo.com/mdemo)
+Copyright (c) 2012-2013 [@mdemo](http://weibo.com/mdemo) and other contributors
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
