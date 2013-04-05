@@ -27,7 +27,7 @@
             });
             _vars.socket.on('callback',function(data){
                 _vars.callbacks[data.mark](data);
-            })
+            });
         }
     };
     root.End = End;
@@ -100,6 +100,9 @@
     };
     End.prototype.findAll = function(callback){
         this.data(null,'findAll',callback);
+    };
+    End.prototype.limit = function(value,callback){
+        this.data(value,'limit',callback)
     };
     End.prototype.on = function (ontype,callback) {
         _vars.socket.emit('onlisten',ontype,this.route);

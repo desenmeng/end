@@ -7,12 +7,15 @@
     <script src="endclient.js"></script>
     <script>
         var chatRooms = new End('chatRooms','http://localhost:8080');
-        chatRooms.on('child_added',function(item){
-            console.log(item);
-        });
-        chatRooms.insert({url:document.location.href,title:document.title},function(id){
-            console.log(id);
-        });
+//        chatRooms.limit(5,function(rooms){
+//           console.log(rooms);
+//        });
+//        chatRooms.on('child_added',function(item){
+//            console.log(item);
+//        });
+//        chatRooms.insert({url:document.location.href,title:document.title},function(id){
+//            console.log(id);
+//        });
 //        var room = chatRooms.child('5155bd645ba882d606000001');
 //        room.on('child_changed',function(item){
 //             console.log(item);
@@ -28,6 +31,9 @@
 //            console.log(result);
 //        });
 //        var roomMsgs = room.child('msgs');
+//        roomMsgs.limit(10,function(msgs){
+//            console.log(msgs);
+//        });
 //        roomMsgs.on('child_added',function(item){
 //            console.log(item);
 //        });
