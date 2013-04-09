@@ -28,43 +28,76 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>End.js</h1>
+          <h2>End.js -- a Realtime BaaS like Firebase by Socket.io and MongoDB</h2>
 
-<h2>What</h2>
+<blockquote>
+<p>Firebase -- Scalable real-time backend .Build apps fast without managing servers.</p>
 
-<p>End.js 是基于Node.js和MongoDB的Baas系统，旨在成为一个可方便部署到Node.js的Package。</p>
+<p>End.js -- Package like Firebase what you can deploy in your own server.</p>
+</blockquote>
 
-<h2>Why</h2>
+<h2>为什么开发End</h2>
 
-<p>想StackMob、Parse、Firebase目前都提供非常好的Baas服务，但是他们都有一些缺点</p>
+<p>第一次看到<a href="http://www.firebase.com">Firebase</a>就被它所吸引，此后尝试使用它开发了一个chrome聊天插件，开发过程中，Firebase极大的提高了开发效率。
+  由于对Firebase的强烈兴趣，所以毕设选择做一个类似的东西，便是<a href="https://github.com/demohi/end">End.js</a></p>
+
+<h2>Firebase的优点</h2>
+
+<ol>
+<li>可伸缩、性能又保证，基于云端</li>
+<li>api简单，开发效率高</li>
+</ol><h2>Firebase的缺点</h2>
+
+<ol>
+<li>数据库无法单独部署</li>
+<li>数据的查询方面的限制，目前api对查询支持很弱，导致Firebase很难用于常规项目的开发</li>
+<li>不易扩展，提供的功能有限制</li>
+<li>服务可用性不可控，如果Firebase服务器出现问题，可能会影响产品</li>
+</ol><h2>为什么使用End</h2>
+
+<ol>
+<li>如果想部署一个自己的Firebase，可以考虑使用End</li>
+<li>增强了数据查询方面的功能</li>
+<li>尽量和Firebase api设计一致</li>
+<li>很方便的和其他Node Package结合使用</li>
+</ol><h1>End快速上手</h1>
+
+<h4>安装</h4>
+
+<pre><code>npm install -g end
+</code></pre>
+
+<h4>开发一个聊天室，详见demo目录</h4>
+
+<pre><code>var chat = new End('chat','http://localhost:8080'),
+    chatRoom = chat.child(window.location.search.split('?')[1]),
+    chatMsgs = chatRoom.child('msgs');
+chatMsgs.on('child_added',function(msg){
+    $('.msgs').append('&lt;div class="msg"&gt;'+msg.value.name+' : '+msg.value.text+'&lt;/div&gt;');
+});
+$('#btn_send').click(function(){
+    var name = $('.txt_send_name').val();
+    var text = $('.txt_send_text').val();
+    chatMsgs.push({name:name,text:text});
+});
+</code></pre>
+
+<h2>项目地址</h2>
+
+<p><a href="https://github.com/demohi/end">End.js</a>
+更详细的使用还是进到项目里面看吧</p>
+
+<h2>未完，待修改….</h2>
+
+<h2>Contributors</h2>
 
 <ul>
-<li>不可以部署到自己的机器上</li>
-<li>当然也不可以设置自己的数据库</li>
-</ul><p>这些缺点导致项目会面临</p>
-
-<ul>
-<li>数据安全</li>
-<li>性能无法自行优化，只能依赖第三方</li>
-</ul><h2>Features</h2>
-
-<ul>
-<li>REST data</li>
-<li>RealTime</li>
-<li>Status Control</li>
-<li>Easy Push</li>
-<li>More Apis</li>
-</ul><h2>Credits</h2>
-
-<ul>
-<li>Node.js</li>
-<li>MongoDB</li>
-<li>Socket.io</li>
+<li><a href="http://weibo.com/mdemo">@mdemo</a></li>
 </ul><h2>License</h2>
 
 <p>(The MIT License)</p>
 
-<p>Copyright (c) 2012 <a href="https://github.com/mdemo" class="user-mention">@mdemo</a>(<a href="http://weibo.com/mdemo">http://weibo.com/mdemo</a>)</p>
+<p>Copyright (c) 2012-2013 <a href="http://weibo.com/mdemo">@mdemo</a> and other contributors</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
