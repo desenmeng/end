@@ -18,5 +18,5 @@ var sio_config = {
     options:{
         'log level':1
     }
-}
+};
 End.init(mongo_config,sio_config);

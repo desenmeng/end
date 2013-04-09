@@ -20,11 +20,6 @@
         this.route = route || '';
         if (url) {
             _vars.socket = io.connect(url);
-            _vars.socket.on('news', function (data) {
-                _vars.socket.emit('my other event', {my:'data'},function(success){
-                    console.log(success);
-                });
-            });
             _vars.socket.on('callback',function(data){
                 _vars.callbacks[data.mark](data);
             });
