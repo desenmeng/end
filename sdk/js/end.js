@@ -203,7 +203,7 @@
      *      @example
      *      var chatRooms = new End('chatRooms','http://localhost:8080');
      *      chatRooms.limit(5,function(rooms){
-     *          console.log(result);// 返回查询结果
+     *          console.log(rooms);// 返回查询结果
      *      });
      *
      * @param {Object} value 查询的数量
@@ -220,7 +220,7 @@
      *      var room = chatRooms.child('5155bd645ba882d606000001');
      *      var roomMsgs = room.child('msgs');
      *      roomMsgs.on('child_added',function(item){
-     *          console.log(result);// 返回最近新添加的消息
+     *          console.log(item);// 返回最近新添加的消息
      *      });
      *
      * @param {Object} ontype ‘child_added’ 'child_removed' 'child_changed'

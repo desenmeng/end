@@ -5,6 +5,7 @@
  * Desc:
  */
 var End = require('./../../lib/end');
+//mongodb设置
 var mongo_config = {
     database: "nodend",
     host:"localhost",
@@ -13,6 +14,7 @@ var mongo_config = {
         auto_reconnect: true
     }
 };
+//socket.io设置
 var sio_config = {
     port: 8080,
     options:{

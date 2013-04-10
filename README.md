@@ -4,6 +4,11 @@
 
 >End.js -- Package like Firebase what you can deploy in your own server.
 
+##相关地址
+[项目地址](https://github.com/demohi/end)
+[api文档](http://demohi.github.io/end/index.html#!/api/End)
+[介绍文章](http://demohi.github.io/tags/End.js/)
+
 ##为什么开发End
   第一次看到[Firebase](http://www.firebase.com)就被它所吸引，此后尝试使用它开发了一个chrome聊天插件，开发过程中，Firebase极大的提高了开发效率。
   由于对Firebase的强烈兴趣，所以毕设选择做一个类似的东西，便是[End.js](https://github.com/demohi/end)
