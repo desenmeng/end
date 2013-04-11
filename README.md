@@ -30,25 +30,7 @@
 4. 很方便的和其他Node Package结合使用
 
 #End快速上手
-####安装
-```
-npm install -g end
-```
-
-####开发一个聊天室，详见demo目录
-```
-var chat = new End('chat','http://localhost:8080'),
-    chatRoom = chat.child(window.location.search.split('?')[1]),
-    chatMsgs = chatRoom.child('msgs');
-chatMsgs.on('child_added',function(msg){
-    $('.msgs').append('<div class="msg">'+msg.value.name+' : '+msg.value.text+'</div>');
-});
-$('#btn_send').click(function(){
-    var name = $('.txt_send_name').val();
-    var text = $('.txt_send_text').val();
-    chatMsgs.push({name:name,text:text});
-});
-```
+(入门教程)
 ##项目地址
 [End.js](https://github.com/demohi/end)
 更详细的使用还是进到项目里面看吧
