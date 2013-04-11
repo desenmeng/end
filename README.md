@@ -30,7 +30,7 @@
 4. 很方便的和其他Node Package结合使用
 
 #End快速上手
-
+[入门教程](http://demohi.github.io/2013/04/09/End.js-%E5%85%A5%E9%97%A8/)
 ##项目地址
 [End.js](https://github.com/demohi/end)
 更详细的使用还是进到项目里面看吧
