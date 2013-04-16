@@ -8,13 +8,9 @@
   "name": "end",
   "version": "0.2.2",
   "main": "end.js",
-  "description": "End.js,BaaS by Node.js and MongoDB",
+  "description": "a Realtime BaaS like Firebase by Socket.io and MongoDB",
   "directories": {
     "doc": "docs"
-  },
-  "dependencies": {
-        "socket.io": "*"
-        , "mongodb": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
