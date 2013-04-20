@@ -48,7 +48,38 @@
             });
         }
     };
+    var Account = {};
     root.End = End;
+    root.Account = Account;
+    Account.addUser = function(user,callback){
+        _vars.socket.emit('account','addUser',user);
+        _vars.callbacks['addUser'] = callback;
+    };
+    Account.login = function(user,callback){
+        _vars.socket.emit('account','login',user);
+        _vars.callbacks['login'] = callback;
+    };
+    Account.autoLogin = function(callback){
+        var user = {
+           user: $.cookie('user'),
+           pass: $.cookie('pass')
+        };
+        if(user.user&&user.pass){
+            _vars.socket.emit('account','autoLogin',user);
+            _vars.callbacks['autoLogin'] = callback;
+        }
+        else{
+            var result = {
+                err:{
+                    code:'3-1',
+                    info:'not find cookie'
+                },
+                success: false,
+                mark:'autoLogin'
+            };
+            callback(result);
+        }
+    };
     /**
      * @method 新建下一级子元素
      *
@@ -101,6 +132,9 @@
      */
     End.prototype.insert = function(value,callback){
         this.data(value,'insert',callback,null);
+    };
+    End.prototype.remove = function(callback){
+        this.data(null,'remove',callback)
     };
     /**
      * @method 修改数据的值
@@ -182,7 +216,7 @@
      *
      */
     End.prototype.findById = function (callback){
-        this.data(null,'findById',callback)
+        this.data(null,'findById',callback);
     };
     /**
      * @method 查询数据，根据路由中的collection Name查询数据
@@ -230,4 +264,6 @@
         _vars.socket.emit('onlisten',ontype,this.route);
         _vars.callbacks[this.route+'.'+ontype] = callback;
     };
+
+
 }(window));

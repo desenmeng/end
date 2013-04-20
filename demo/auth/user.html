@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="../../client/socket.io.min.js"></script>
+    <script src="../../client/end.js"></script>
+    <script src="../chat/js/lib/jquery-1.9.1.min.js"></script>
+    <script src="../chat/js/lib/jquery.cookie.js"></script>
+    <script>
+        var chat = new End('users','http://localhost:8080');
+//        chat.insert({url:document.location.href,title:document.title},function(id){
+//            console.log(id);
+//        });
+//        var room = chat.child('5172a92fdba343f406000001');
+//        room.findById(function(res){
+//            console.log(res);
+//        });
+//        room.update({name:'test'},{},function(res){
+//            console.log(res);
+//        });
+//        room.remove(function(res){
+//            console.log(res)
+//        });
+        var groups = new End('groups');
+        var authDemo = {
+            _id:'normal',
+            chat:{
+                create:true,
+                read:true,
+                upadate:false,
+                delete:false
+            }
+        };
+        groups.insert(authDemo,function(res){
+            console.log(res);
+        });
+//        chat.insert({_id:'mdemo',name:'desen'},function(res){
+//            console.log(res);
+//        });
+//        Account.addUser({name:'WangYuchen',email:'mengdesen09@qq.com',pass:'123456',group:'normal',user:'yuchen'},function(result){
+//            console.log(result);
+//        });
+//        $.cookie('user', 'yuchen',{path:'/'});
+//        Account.login({pass:'123456',user:'yuchen',rememberMe:true},function(result){
+//            console.log(result);
+//            if(result.success){
+//                console.log('登录成功');
+//                if(result.token){
+//                    $.cookie('pass', result.token,{path:'/'});
+//                }
+//            }
+//        });
+//        Account.autoLogin(function(result){
+//            console.log(result);
+//        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
