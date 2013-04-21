@@ -62,9 +62,9 @@
     Account.autoLogin = function(callback){
         var user = {
            user: $.cookie('user'),
-           pass: $.cookie('pass')
+           token: $.cookie('token')
         };
-        if(user.user&&user.pass){
+        if(user.user&&user.token){
             _vars.socket.emit('account','autoLogin',user);
             _vars.callbacks['autoLogin'] = callback;
         }

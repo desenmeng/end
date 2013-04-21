@@ -22,38 +22,38 @@
 //        room.remove(function(res){
 //            console.log(res)
 //        });
-        var groups = new End('groups');
-        var authDemo = {
-            _id:'normal',
-            chat:{
-                create:true,
-                read:true,
-                upadate:false,
-                delete:false
-            }
-        };
-        groups.insert(authDemo,function(res){
-            console.log(res);
-        });
+//        var groups = new End('groups');
+//        var authDemo = {
+//            _id:'normal',
+//            chat:{
+//                create:true,
+//                read:true,
+//                upadate:false,
+//                delete:false
+//            }
+//        };
+//        groups.insert(authDemo,function(res){
+//            console.log(res);
+//        });
 //        chat.insert({_id:'mdemo',name:'desen'},function(res){
 //            console.log(res);
 //        });
-//        Account.addUser({name:'WangYuchen',email:'mengdesen09@qq.com',pass:'123456',group:'normal',user:'yuchen'},function(result){
+//        Account.addUser({name:'test',email:'test2@qq.com',pass:'123456',group:'test',user:'test2'},function(result){
 //            console.log(result);
 //        });
-//        $.cookie('user', 'yuchen',{path:'/'});
-//        Account.login({pass:'123456',user:'yuchen',rememberMe:true},function(result){
+//        Account.login({pass:'123456',user:'test2',rememberMe:true},function(result){
 //            console.log(result);
 //            if(result.success){
 //                console.log('登录成功');
 //                if(result.token){
-//                    $.cookie('pass', result.token,{path:'/'});
+//                    $.cookie('token', result.token,{path:'/'});
+//                    $.cookie('user', result.user,{path:'/'});
 //                }
 //            }
 //        });
-//        Account.autoLogin(function(result){
-//            console.log(result);
-//        });
+        Account.autoLogin(function(result){
+            console.log(result);
+        });
     </script>
 </head>
 <body>
