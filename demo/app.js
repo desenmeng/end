@@ -5,6 +5,10 @@
  * Desc:
  */
 var End = require('./../lib/end');
+var app = require('express')()
+    , server = require('http').createServer(app);
+
+
 //mongodb设置
 var mongo_config = {
     database: "nodend",
@@ -21,4 +25,6 @@ var sio_config = {
         'log level':1
     }
 };
-End.init(mongo_config,sio_config);
+server.listen(80);
+var sio = End.init(mongo_config,server);
+sio.set('log level', 1);
