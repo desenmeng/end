@@ -8,7 +8,7 @@
     <script src="../chat/js/lib/jquery-1.9.1.min.js"></script>
     <script src="../chat/js/lib/jquery.cookie.js"></script>
     <script>
-        var chat = new End('users','http://localhost:80');
+        var chat = new End('chat','http://localhost:80');
 //        chat.insert({url:document.location.href,title:document.title},function(id){
 //            console.log(id);
 //        });
@@ -38,9 +38,15 @@
 //        chat.insert({_id:'mdemo',name:'desen'},function(res){
 //            console.log(res);
 //        });
-//        Account.addUser({name:'test',email:'test2@qq.com',pass:'123456',group:'test',user:'test2'},function(result){
+//        Account.addUser({name:'desen',email:'mengdesen09@qq.com',pass:'123456',group:'guest',user:'mdemo'},function(result){
 //            console.log(result);
 //        });
+//        Account.passwordReset('mengdesen09@qq.com',function(result){
+//            console.log(result);
+//        });
+        Account.validateReset('mengdesen09@qq.com','af08558c12c0ed565bfa317299e7ba1e4e3dc40cded22af269f915927deb65f0','321456',function(result){
+            console.log(result);
+        });
 //        Account.login({pass:'123456',user:'test2',rememberMe:true},function(result){
 //            console.log(result);
 //            if(result.success){
@@ -51,9 +57,9 @@
 //                }
 //            }
 //        });
-        Account.autoLogin(function(result){
-            console.log(result);
-        });
+//        Account.autoLogin(function(result){
+//            console.log(result);
+//        });
     </script>
 </head>
 <body>

@@ -80,6 +80,14 @@
             callback(result);
         }
     };
+    Account.passwordReset = function(email,callback){
+        _vars.socket.emit('account','passwordReset',email);
+        _vars.callbacks['passwordReset'] = callback;
+    };
+    Account.validateReset = function(email,token,newpass,callback){
+        _vars.socket.emit('account','validateReset',{email:email,token:token,newpass:newpass});
+        _vars.callbacks['validateReset'] = callback;
+    };
     /**
      * @method 新建下一级子元素
      *
