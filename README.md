@@ -13,13 +13,15 @@
 [api文档](http://demohi.github.io/end/index.html#!/api/End)  
 [相关文章](http://demohi.github.io/tags/End.js/)
 
+##最近完成  
+1. 权限模块（数据访问权限）  
+2. 用户模块（注册、登录、密码找回等）  
+ 
 ##当前进行中
-1. 增加数据访问权限模块(pre beta)  
-2. 用户登录模块(pre beta)
+1. 代码重构
 
 ##后续计划
-1. 权限模块
-2. 增加其他语言的sdk
+1. 增加其他语言的sdk
 
 ## Contributors
 * [@mdemo](http://weibo.com/mdemo)
