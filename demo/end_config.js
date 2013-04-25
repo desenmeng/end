@@ -6,7 +6,6 @@
  */
 exports.end_config = {
     mongo_config: {
-//        mongoURI: 'mongodb://mdemo:yuchen12@alex.mongohq.com:10009/nodend',
         mongoURI: 'mongodb://localhost:27017/nodend',
         options: {
             auto_reconnect: true
