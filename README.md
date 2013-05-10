@@ -9,7 +9,7 @@
 不会像meteor一样提供前后端统一的框架,End只关注实时数据。
 
 #End快速上手  
-*目前文档过时 等待更新*
+*目前文档过时 等待更新*  
 [入门教程](http://demohi.github.io/2013/04/09/End.js-%E5%85%A5%E9%97%A8/)  
 [api文档](http://demohi.github.io/end/index.html#!/api/End)  
 [相关文章](http://demohi.github.io/tags/End.js/)
