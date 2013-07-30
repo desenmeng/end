@@ -21,7 +21,7 @@ exports.end_config = {
     email_config: {
         host: 'smtp.gmail.com',
         user: 'mengdesen@gmail.com',
-        password: 'chen12!@',
+        password: '******',
         from: 'End.js <mengdesen@gmail.com>',
         resetURL: 'http://localhost:3000/reset'
     }
