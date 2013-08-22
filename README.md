@@ -10,9 +10,9 @@
 
 #End快速上手  
 *目前文档过时 等待更新*  
-[入门教程](http://demohi.github.io/2013/04/09/End.js-%E5%85%A5%E9%97%A8/)  
+[36kr报道](http://www.36kr.com/p/202573.html)  
 [api文档](http://demohi.github.io/end/index.html#!/api/End)  
-[相关文章](http://demohi.github.io/tags/End.js/)
+[相关文章](http://demohi.github.io/tags/Endjs/)
 
 ##最近完成  
 1. 权限模块（数据访问权限）  
