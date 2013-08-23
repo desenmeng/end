@@ -11,7 +11,7 @@
 #End快速上手  
 *目前文档过时 等待更新*  
 [36kr报道](http://www.36kr.com/p/202573.html)  
-[api文档](http://demohi.github.io/end/index.html#!/api/End)  
+[api文档](http://demohi.github.io/end/#!/api/End)  
 [相关文章](http://demohi.github.io/tags/Endjs/)
 
 ##最近完成  
