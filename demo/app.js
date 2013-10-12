@@ -9,6 +9,6 @@ var End = require('./../lib/end'),
     app = require('express')(),
     server = require('http').createServer(app);
 
-server.listen(80);
+server.listen(8080);
 var sio = End.init(end_config, server);
 sio.set('log level', 1);

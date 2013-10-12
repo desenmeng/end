@@ -19,6 +19,13 @@
     "type": "git",
     "url": "https://github.com/demohi/end.git"
   },
+  "dependencies": {
+      "emailjs":"*",
+      "mongodb":"*",
+      "socket.io":"*",
+      "moment":"*",
+      "crypto":"*"
+  },
   "keywords": [
     "baas",
     "end",
