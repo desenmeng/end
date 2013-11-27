@@ -32,3 +32,7 @@
 (The MIT License)
 
 Copyright (c) 2013 [@mdemo](http://weibo.com/mdemo) and other contributors
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/demohi/end/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
