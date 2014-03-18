@@ -13,7 +13,7 @@
 *目前文档过时 等待更新*  
 [36kr报道](http://www.36kr.com/p/202573.html)  
 [api文档](http://demohi.github.io/end/#!/api/End)  
-[相关文章](http://demohi.github.io/tags/Endjs/)
+[相关文章](http://boke.us/tags/End.js/)
 
 ##最近完成  
 1. 权限模块（数据访问权限）  
