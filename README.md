@@ -1,4 +1,4 @@
-#this project is not maintained
+#This project is not maintained,you can use [wisejs](https://github.com/wisejs/wise)
 ##End.js -- a Realtime BaaS like Firebase by Socket.io and MongoDB
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/demohi/end?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
