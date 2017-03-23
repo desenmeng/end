@@ -1,6 +1,5 @@
 # This project is not maintained
 ## End.js -- a Realtime BaaS like Firebase by Socket.io and MongoDB
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/demohi/end?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 >Firebase -- Scalable real-time backend .Build apps fast without managing servers.
 
@@ -37,7 +36,4 @@
 (The MIT License)
 
 Copyright (c) 2013 [@mdemo](http://weibo.com/mdemo) and other contributors
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/demohi/end/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
