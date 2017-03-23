@@ -29,11 +29,11 @@
 1. 增加其他语言的sdk
 
 ## Contributors
-* [@mdemo](http://weibo.com/mdemo)
+* [@demohi](http://weibo.com/demohi)
 
 
 ## License
 (The MIT License)
 
-Copyright (c) 2013 [@mdemo](http://weibo.com/mdemo) and other contributors
+Copyright (c) 2013 [@demohi](http://weibo.com/demohi) and other contributors
 
