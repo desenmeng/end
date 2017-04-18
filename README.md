@@ -8,7 +8,7 @@
 
 [English Version](https://github.com/foss4good/end)
 
-##End的定位
+## End的定位
 安全、高性能的实时数据框架  
 不会像meteor一样提供前后端统一的框架,End只关注实时数据。
 
